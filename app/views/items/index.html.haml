@@ -1,0 +1,4 @@
+%ul
+	= render :partial=>'li', :collection => @items, :as => :item
+- if can? :create, Item 
+	%p= link_to "New Item", new_item_path

@@ -1,0 +1,9 @@
+- title "Login"
+
+- semantic_form_for @user_session do |form|
+	- form.inputs do
+		= form.input :username
+		= form.input :password, :as => :password
+	- form.buttons do
+		= form.commit_button :label => 'Login'
+

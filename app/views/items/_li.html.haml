@@ -1,0 +1,8 @@
+%li[item]
+	= image_tag(item.image_url, :alt=>"icon")
+	%h3= item.name
+	- if can? :update, item
+		.actions
+			= link_to 'Edit', edit_item_path(item)
+			|
+			= link_to 'Remove', item, :confirm => 'Are you sure?', :method => :delete
