@@ -5,7 +5,11 @@ class Ability
     user ||= User.new # guest user
     
     if user.admin?
-      can :manage, :all
+      can :manage, Item
+      can :update, User do |u|
+        user == u
+      end
+      can [:new,:create], User
     else
       can :read, :all
       can :manage, User do |u|
