@@ -13,7 +13,9 @@ body
 	-webkit-border-radius: 15px
 	padding: 20px 50px
 	margin: 20px 10px 0px
-
+	:overflow hidden
+#footer
+	:padding 20px
 h1, h2
 	:font-family "ff-prater-sans-web-pro-1","ff-prater-sans-web-pro-2", sans-serif
 
@@ -34,19 +36,18 @@ li.item
 	:text-align center
 	img
 		:margin 0px 10px
+		:width 100px
+		:height 100px
+		:background-color #f2f2f2
 	h3
 		:height 36px
 		:width 120px
-p
-	padding: 2em 0 1em 0
-	clear: both
+
 
 a
 	&:link, &:visited
-		color: #FF920D
+		color: #2C3718
 		text-decoration: none
 		font-weight: bold
-
 	&:hover, &:active
-		color: #B1CC7A
-		text-decoration: none
+		text-decoration: underline
