@@ -5,16 +5,13 @@ class ItemsController < ApplicationController
     @items = Item.all(:order=>'name ASC')
   end
   
-  def show
-  end
-  
   def new
   end
   
   def create
     if @item.save
       flash[:notice] = "Successfully created item."
-      redirect_to @item
+      redirect_to items_url
     else
       render :action => 'new'
     end
@@ -26,7 +23,7 @@ class ItemsController < ApplicationController
   def update
     if @item.update_attributes(params[:item])
       flash[:notice] = "Successfully updated item."
-      redirect_to @item
+      redirect_to items_url
     else
       render :action => 'edit'
     end

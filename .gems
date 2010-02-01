@@ -2,3 +2,4 @@ authlogic
 haml
 formtastic
 cancan
+paperclip

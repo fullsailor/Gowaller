@@ -1,5 +1,5 @@
-- semantic_form_for @item do |form|
+- semantic_form_for @item, :html => { :multipart => true } do |form|
 	- form.inputs do
 		= form.input :name
-		= form.input :image_url
+		= form.input :icon
 	= form.buttons :commit
